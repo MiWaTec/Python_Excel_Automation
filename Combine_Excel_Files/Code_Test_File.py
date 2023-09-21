@@ -2,7 +2,6 @@ import customtkinter
 import os
 
 
-
 class ScrollableCheckBoxFrame(customtkinter.CTkScrollableFrame):
     def __init__(self, master, item_list, command=None, **kwargs):
         super().__init__(master, **kwargs)
