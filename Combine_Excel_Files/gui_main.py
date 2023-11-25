@@ -8,7 +8,8 @@ window.geometry('500x480')
 window.columnconfigure(0, weight=1)
 window.title('Combine Excel Files')
 
-frame_color = '#6910b3'
+# Set color
+frame_color = '#300666'
 
 # Select folder and search for files
 frame_select_folder = ctk.CTkFrame(window, fg_color=frame_color)

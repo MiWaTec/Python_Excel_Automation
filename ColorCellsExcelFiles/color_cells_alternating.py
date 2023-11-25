@@ -8,9 +8,9 @@ wb = load_workbook(excel_file)
 ws = wb.active
 
 # Set cell colors
-color_header = 'e68e37'
+color_header = 'ffffff'
 color_1 = 'ffffff'
-color_2 = 'ffc48a'
+color_2 = 'ffffff'
 
 # Set border color
 border_look = Side(border_style=BORDER_THIN, color='00bbbdbb')
@@ -22,8 +22,8 @@ border = Border(
 )
 
 # Color cells in alternating style
-number_rows = ws.max_row
-for row in ws.iter_rows(min_row=1, max_row=number_rows):
+#number_rows = ws.max_row
+for row in ws.iter_rows():
     if row[1].row == 1:
         color = color_header
     elif row[1].row % 2 == 0:
@@ -36,3 +36,11 @@ for row in ws.iter_rows(min_row=1, max_row=number_rows):
 
 # Save workbook
 wb.save(excel_file)
+
+# color_header = 'e68e37'
+# color_1 = 'ffffff'
+# color_2 = 'ffc48a'
+
+# color_header = 'ffffff'
+# color_1 = 'ffffff'
+# color_2 = 'ffffff'
