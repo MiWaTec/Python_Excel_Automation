@@ -2,7 +2,7 @@ from openpyxl import load_workbook
 from openpyxl.styles import Font
 
 # Open workbook
-excel_file_path = r"C:/Users/warsi/Desktop/ExcelData\Client_Data.xlsx"
+excel_file_path = "C:/Users/warsi/Desktop/ExcelData\Client_Data_colored.xlsx"
 wb = load_workbook(excel_file_path)
 ws = wb.active
 
@@ -25,8 +25,7 @@ for cells_in_row in ws.iter_rows(min_row=2,
     cell_value = cells_in_row[0].internal_value
     if cell_value in list(color_dict):
         cells_in_row[0].font = Font(color=color_dict[cell_value],
-                                    bold=True,
-                                    italic=True)
+                                    bold=True)
 
 # Save workbook
-wb.save(r"C:/Users/warsi/Desktop/ExcelData\Client_Data_colored.xlsx")
+wb.save("C:/Users/warsi/Desktop/ExcelData\Client_Data.xlsx")

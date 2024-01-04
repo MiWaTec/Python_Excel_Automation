@@ -2,15 +2,15 @@ from openpyxl import load_workbook
 from openpyxl.styles import Font
 
 # Open workbook
-excel_file_path = r"C:/Users/warsi/Desktop/ExcelData\Client_Data.xlsx"
+excel_file_path = "C:/Users/warsi/Desktop/ExcelData\Client_Data.xlsx"
 wb = load_workbook(excel_file_path)
 ws = wb.active
 
 # Define colors
 color_dict = {
-    'underweight': '0065a3',
+    'underweight': '00bcd1',
     'normal weight': '00a323',
-    'overweight': 'a30010'
+    'overweight': 'fc033d'
 }
 
 # Get column index
@@ -32,4 +32,4 @@ for cells_in_row in ws.iter_rows(min_row=2,
         cells_in_row[0].font = Font(color=color_dict['overweight'])
 
 # Save workbook
-wb.save(r"C:/Users/warsi/Desktop/ExcelData\Client_Data_colored.xlsx")
+wb.save("C:/Users/warsi/Desktop/ExcelData\Client_Data_colored.xlsx")
