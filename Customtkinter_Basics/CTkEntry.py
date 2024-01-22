@@ -2,7 +2,7 @@ import customtkinter as ctk
 
 
 # Main window
-window = ctk.CTk(fg_color='gray')
+window = ctk.CTk()
 window.geometry('550x200')
 window.title('Example App Title')
 
@@ -19,8 +19,8 @@ entry2 = ctk.CTkEntry(window,
 entry2.grid(row=0, column=1, padx=20, pady=20)
 
 entry3 = ctk.CTkEntry(window,
-                      border_width=5,
-                      border_color='red')
+                      border_width=4,
+                      border_color='crimson')
 entry3.grid(row=0, column=2, padx=20, pady=20)
 
 # Wait for interaction with the GUI
