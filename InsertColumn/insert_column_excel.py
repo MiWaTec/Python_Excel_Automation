@@ -1,38 +1,17 @@
 import pandas as pd
-from openpyxl import load_workbook
 
-# Get dataframe from excel
-excel_file_path = "C:/Users/Michael/Desktop/ExcelData\Client_Data.xlsx"
-df = pd.read_excel(excel_file_path)
+# Get dataframe from excel file
+file_path = "C:/Users/warsi/Desktop/ExcelData\Client_Data.xlsx"
+df = pd.read_excel(file_path)
 
-# Creae
-col_index =df.columns.get_loc('Weight (kg)')
-df.insert(col_index+1, 'BMI2', None)
-df['BMI'] = df['Weight (kg)'] / (df['Height (cm)']/100)**2
+# Insert an empty column 
+col_index = df.columns.get_loc('Weight (kg)')
+df.insert(col_index+1, 'BMI', None)
+df['BMI'] = round(df['Weight (kg)'] / (df['Height (cm)']/100)**2, 1)
 
 # Update excel file with new column
-df.to_excel(excel_file_path, index=False)
+df.to_excel(file_path, index=False)
 
 # Video title: 
 # Insert empty column and calculate values from two other columns | Python Pandas
 # How to calculate values in empty column
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
