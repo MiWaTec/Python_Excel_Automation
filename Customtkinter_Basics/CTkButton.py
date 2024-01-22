@@ -14,10 +14,10 @@ window.geometry('550x700')
 window.title('Example App Title')
 
 # Template
-button7 = ctk.CTkButton(window, text='Right',
-                        image=btn_image
-                        )
-button7.grid(row=6, column=0, padx=205, pady=20)
+# button7 = ctk.CTkButton(window, text='Right',
+#                         image=btn_image
+#                         )
+# button7.grid(row=6, column=0, padx=205, pady=20)
 
 # CTkButton
 button1 = ctk.CTkButton(window,

@@ -16,3 +16,23 @@ df.to_excel(excel_file_path, index=False)
 # Video title: 
 # Insert empty column and calculate values from two other columns | Python Pandas
 # How to calculate values in empty column
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
