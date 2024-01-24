@@ -20,7 +20,7 @@ color_dict = {
 
 for cells_in_row in ws.iter_rows(min_row=2):
     cell_value = cells_in_row[col_index-1].internal_value
-    if cell_value in list(color_dict):
+    if cell_value in color_dict:
         cells_in_row[col_index-1].font = Font(color=color_dict[cell_value])
 
 # Save workbook
