@@ -1,27 +1,32 @@
 import customtkinter as ctk
 
-
 # Main window
 window = ctk.CTk()
-window.geometry('550x200')
+window.geometry('550x550')
 window.title('Example App Title')
 
 # CTkEntry
 entry = ctk.CTkEntry(window,
                      fg_color='orange',
-                     text_color='black')
-entry.grid(row=0, column=0, padx=20, pady=20)
+                     text_color='blue',
+                     width=300,
+                     height=50)
+entry.grid(row=0, column=0, padx=125, pady=20)
 
 entry2 = ctk.CTkEntry(window,
                       corner_radius=20,
                       placeholder_text='Entry your name',
                       placeholder_text_color='yellow')
-entry2.grid(row=0, column=1, padx=20, pady=20)
+entry2.grid(row=1, column=0, padx=20, pady=20)
 
 entry3 = ctk.CTkEntry(window,
                       border_width=4,
                       border_color='crimson')
-entry3.grid(row=0, column=2, padx=20, pady=20)
+entry3.grid(row=2, column=0, padx=20, pady=20)
+
+entry4 = ctk.CTkEntry(window,
+                      state='disabled')
+entry4.grid(row=3, column=0, padx=20, pady=20)
 
 # Wait for interaction with the GUI
 window.mainloop()
