@@ -3,7 +3,7 @@ import customtkinter as ctk
 # Main window
 window = ctk.CTk()
 window.geometry('550x550')
-window.title('Example App Title')
+window.title('Entry')
 
 # CTkEntry
 entry = ctk.CTkEntry(window,
