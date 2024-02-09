@@ -21,16 +21,18 @@ combobox = ctk.CTkComboBox(window,
                            command=combobox_pressed)
 combobox.grid(row=0, column=0, padx=200, pady=50)
 
-combobox2 = ctk.CTkComboBox(window, values=option_list,
+combobox2 = ctk.CTkComboBox(window,
+			                values=option_list,
                             border_width=5,
                             border_color='orange')
 combobox2.grid(row=1, column=0, padx=20, pady=50)
 
-combobox3 = ctk.CTkComboBox(window, values=option_list,
+combobox3 = ctk.CTkComboBox(window,
+                            values=option_list,
                             corner_radius=20,
                             dropdown_fg_color='greenyellow',
-                            dropdown_hover_color='magenta',
-                            dropdown_text_color='blue')
+			    dropdown_text_color='blue',
+                            dropdown_hover_color='magenta')
 combobox3.grid(row=2, column=0, padx=20, pady=50)
 
 # Wait for interaction with the GUI
