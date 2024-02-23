@@ -8,7 +8,7 @@ window.title('Label')
 
 # Label
 label = ctk.CTkLabel(window,
-                     text = 'Label example',
+                     text = 'This is a label',
                      fg_color='orange',
                      text_color='blue',
                      width = 100,
@@ -17,11 +17,13 @@ label.grid(row=0, column=0, padx=235, pady=50)
 
 label2 = ctk.CTkLabel(window,
                       fg_color='red',
-                      corner_radius=20)
+		      corner_radius=20)
 label2.grid(row=1, column=0, padx=235, pady=50)
 
+
 # Label with icon
-label_image = ctk.CTkImage(Image.open('BTN_Icon.png'))
+icon = Image.open('BTN_Icon.png')
+label_image = ctk.CTkImage(icon)
 
 label3 = ctk.CTkLabel(window,
                       text='Label with image',
@@ -29,9 +31,16 @@ label3 = ctk.CTkLabel(window,
                       width=50,
                       height=30,
                       image = label_image,
-                      compound='bottom',
                       padx=20,
-                      pady=10)
+                      pady=10,
+                      compound='left')
+label3.grid(row=2, column=0, padx=235, pady=50)
+
+label3 = ctk.CTkLabel(window,
+                      text='Label with image',
+                      fg_color='purple',
+                      width=50,
+                      height=30,)
 label3.grid(row=2, column=0, padx=235, pady=50)
 
 # Wait for interaction with the GUI
