@@ -3,7 +3,7 @@ import customtkinter as ctk
 # Main window
 window = ctk.CTk()
 window.geometry('500x650')
-window.title('Example App Title')
+window.title('Frame')
 
 # CTkFrame
 frame_1 = ctk.CTkFrame(window,
