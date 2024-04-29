@@ -10,20 +10,20 @@ def stop_progressbar():
 
 # CTkProgressBar
 progressbar = ctk.CTkProgressBar(window,
-                                 width=150,
+                                 width=300,
                                  height=20,
                                  fg_color="yellow",
                                  progress_color="green",
                                  border_width=5,
                                  border_color="red",
                                  mode="determinate",
-                                 determinate_speed=1)
+                                 determinate_speed=3)
 progressbar.grid(row=0, column=0, padx=150, pady=100)
 
 progressbar2 = ctk.CTkProgressBar(window,
                                   corner_radius=1,
                                   mode="indeterminate",
-                                  indeterminate_speed=2)
+                                  indeterminate_speed=0.5)
 progressbar2.grid(row=1, column=0, padx=150, pady=100)
 
 # Wait for interaction with the GUI
