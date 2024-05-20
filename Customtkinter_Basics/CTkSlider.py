@@ -11,7 +11,7 @@ def slider_event(value):
 # CTkSlider
 slider = ctk.CTkSlider(window,
                        command=slider_event,
-                       number_of_steps=100,
+                       number_of_steps=20,
                        from_=0,
                        to=100)
 slider.grid(row=0, column=0, padx=180, pady=50)
@@ -31,7 +31,6 @@ slider3 = ctk.CTkSlider(window,
                         hover=False,
                         orientation='vertical',
                         state='disable')
-slider3.grid(row=2, column=0, padx=180, pady=50)
 
 # Wait for interaction with the GUI
 window.mainloop()
