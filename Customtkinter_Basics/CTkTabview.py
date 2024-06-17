@@ -23,7 +23,7 @@ tabview = ctk.CTkTabview(window,
                          segmented_button_unselected_color='green',
                          segmented_button_unselected_hover_color='darkturquoise',
                          text_color='yellow',
-                         anchor='se',
+                         anchor='nw',
                          command=selected_tab)
 # tabview.grid(row=0, column=0, padx=125, pady=50)
 tabview.grid(row=0, column=0, padx=25, pady=25)
