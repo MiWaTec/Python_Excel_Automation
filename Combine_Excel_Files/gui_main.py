@@ -9,8 +9,9 @@ ctypes.windll.shcore.SetProcessDpiAwareness(1)
 window = ctk.CTk()
 window.geometry('750x605')
 window.resizable(False, False)
+window.rowconfigure(0, weight=1)
 window.columnconfigure(0, weight=0)
-window.columnconfigure(1, weight=2)
+window.columnconfigure(1, weight=1)
 window.title('Excel File Merger')
 
 # Add image
@@ -20,7 +21,6 @@ image = ImageTk.PhotoImage(src_img)
 
 img_frame = ctk.CTkFrame(window)
 img_frame.grid(row=0, column=0, rowspan=3, padx=(5, 2), pady=(5, 5))
-img_frame.columnconfigure(1, weight=1)
 
 img_label = ctk.CTkLabel(img_frame,
                          image=image)
@@ -125,10 +125,11 @@ btn_search_files = ctk.CTkButton(frame_combine_files,
                                  width=75, text='Merge',
                                  fg_color='#06361B',
                                  hover_color='#66E383',
-                                 command=lambda: func.combineExcelFiles(scrollable_frame,
-                                                                        input_folder.get(),
-                                                                        input_save_merged_excel.get(),
-                                                                        input_save_combined_excel.get()))
+                                 command=lambda: func.mergeSelectedExcelData(display_mode.get(),
+                                                                             scrollable_frame,
+                                                                             input_folder.get(),
+                                                                             input_save_merged_excel.get(),
+                                                                             input_save_combined_excel.get()))
 btn_search_files.grid(row=3, column=2, padx=[0, 20], pady=[0, 15])
 
 # Wait for interaction with the GUI
